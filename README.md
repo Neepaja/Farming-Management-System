@@ -34,7 +34,7 @@ A web-based management system developed using React, Express, Node.js, and MySQL
 ![View Farmer Screenshot](https://github.com/Neepaja/Farming-Management-System/blob/main/UserInterface/View_Farmer.png)
 
 ### Manage Supplies
-![Manage Supplies Screenshot](https://github.com/Neepaja/Farming-Management-System/blob/main/UserInterface/Manage_Supplies.png)
+![Manage Supplies Screenshot](https://github.com/Neepaja/Farming-Management-System/blob/main/UserInterface/Add_Supplies.png)
 
 ### Manage Income & Expenses
 ![Manage Income & Expenses Screenshot](https://github.com/Neepaja/Farming-Management-System/blob/main/UserInterface/Manage_Income&Expenses.png)
