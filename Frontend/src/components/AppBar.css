@@ -1,0 +1,80 @@
+.appbar {
+  background: linear-gradient(90deg, #FFFFFF, #f1f2f5); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+  color: darkblack;
+  font-family: Georgia, serif;
+  position: relative;
+}
+
+.alogo {
+  font-size: 24px;
+  color: #1A4D2E;
+  font-weight: bold;
+  position: absolute;
+  left: 230px; /* Initial position of logo */
+  transition: left 0.3s ease; /* Transition for smooth movement */
+}
+
+/* Add styles for the text */
+.alogo span {
+  display: inline-block;
+  vertical-align: -40%;
+  font-family: Georgia, serif;
+}
+
+/* When navigation bar is minimized */
+.sidebar.minimized .alogo {
+  left: 90px; /* Adjusted position of logo when minimized */
+  transition: left 0.3s ease; /* Transition for smooth movement */
+}
+
+
+.user-details {
+  position: absolute;
+  right: 20px; /* Initial position of user details */
+}
+
+/* When navigation bar is minimized */
+.appbar.minimized .alogo {
+  left: 90px; /* Adjusted position of logo when minimized */
+}
+
+/* When navigation bar is minimized, adjust position of user details */
+.appbar.minimized .user-details {
+  right: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .alogo {
+    left: 90px; /* Adjusted position of logo for small screens */
+  }
+
+  .user-details {
+    right: 10px; /* Adjusted position of user details for small screens */
+  }
+
+  /* Adjust position of logo when navigation bar is minimized on small screens */
+  .appbar.minimized .alogo {
+    left: 60px;
+  }
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #c5c5c5; /* Light grey for email */
+}
+
+
+.user-details .user-email {
+  color: #cccccc;
+}

@@ -1,0 +1,339 @@
+.container {
+  background-color: #f8f9fa; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.container.minimized {
+  margin-left: 60px; /* Adjust based on the minimized sidebar width */
+  width: calc(100% - 60px); /* Adjust based on the minimized sidebar width */
+  max-width: calc(100% - 60px); /* Adjust based on the minimized sidebar width */
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 60px; /* Adjust for minimized sidebar on small screens */
+    width: calc(100% - 60px); /* Adjust for minimized sidebar on small screens */
+    max-width: calc(100% - 60px); /* Adjust for minimized sidebar on small screens */
+  }
+}
+.container.expanded {
+  margin-left: 200px; /* Sidebar expanded width */
+  width: calc(100% - 200px); /* Adjust based on the sidebar width */
+  max-width: calc(100% - 200px); /* Adjust based on the sidebar width */
+}
+
+/* Add this style for the dark overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 998; /* Ensure the overlay appears beneath the popup */
+}
+
+/* Adjust the z-index of the popup to ensure it appears above the overlay */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Ensure the popup appears above the overlay */
+  display: none;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.popup.active {
+  display: block;
+}
+
+
+.popup-content {
+  text-align: center;
+}
+
+/* .popup.active {
+  display: block;
+} */
+
+.popup h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup .form-group {
+  margin-bottom: 20px;
+}
+
+.popup label {
+  font-weight: bold;
+}
+
+.popup input[type="text"],
+.popup input[type="number"],
+.popup select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #2daa14;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none; /* Remove default outline */
+}
+
+.popup button:hover {
+  background-color: #1A4D2E;
+}
+
+.popup button[type="button"] {
+  background-color: #dc3545;
+}
+
+.popup button[type="button"]:hover {
+  background-color: #bd2130;
+}
+
+h3 {
+  text-align: left; /* Aligns the heading to the left */
+}
+
+.edit-icon,
+.delete-icon,
+.view-icon {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.edit-icon:hover,
+.delete-icon:hover,
+.view-icon:hover {
+  color: #2daa14;
+}
+
+.addnew-btn {
+  color: white;
+  background-color: #2daa14;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addnew-btn:hover {
+  background-color: #1A4D2E;
+  color: white;
+}
+.addnew-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.addnew-btn:focus {
+  outline: none; 
+  box-shadow: 0 0 0 3px rgba(45, 170, 20, 0.5); 
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  width: calc(25% - 5px);
+  margin-right: auto;
+}
+
+.search-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  font-size: 16px;
+  padding: 5px 5px 5px 35px; 
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 35px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #ccc;
+  pointer-events: none; /* Prevent the icon from blocking input events */
+}
+
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(19, 18, 18, 0.1);
+  padding: 60px; /* Increase padding for larger popup */
+  border-radius: 10px; /* Increase border radius for rounded corners */
+  animation: fade-in 0.3s ease-out;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.success-message {
+  font-size: 17px; /* Increase font size for better readability */
+}
+
+.btn-close {
+  background-color: #2daa14;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Position the button absolutely */
+  right: 20px; 
+  bottom: 20px;
+}
+/* #0056b3*/
+.btn-close:hover {
+  background-color: #216125;
+}
+
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+.manage-farmers-title {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; 
+}
+
+.status-analysis-page {
+  position: relative; /* Ensure relative positioning for absolute positioning of app bar */
+}
+
+.table-container thead,
+.table-container tbody {
+  display: table; /* Ensure proper table layout for both thead and tbody */
+  width: 100%; /* Ensure both thead and tbody take full width */
+}
+
+.table-container thead th {
+  position: sticky; /* Make the table header sticky */
+  top: 0; /* Stick the header to the top */
+  z-index: 1; /* Ensure the header appears above other content */
+  background-color: #1A4D2E; /* Optional: Customize the background color */
+  color: white; /* Optional: Customize the text color */
+  padding: 10px;
+  text-align: left;
+}
+
+.table-container tbody {
+  display: block; /* Enable vertical scrolling for tbody */
+  max-height: 420px; /* Optional: Set a maximum height for vertical scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-container tbody tr {
+  display: table; /* Ensure proper table row layout */
+  width: 100%; /* Ensure rows take full width */
+}
+
+.table-container tbody td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-container thead,
+.table-container tbody tr {
+  display: table;
+  table-layout: fixed; /* Ensure consistent cell widths */
+  width: 100%;
+}
+
+.table-container table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+} 
+
+/* for add edit  */
+
+.modal-overlay-add {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-add {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 600px;
+  max-height: calc(100vh - 40px); /* Adjusted max height to fit within viewport */
+  overflow-y: auto; 
+}
+
+.modal-content-add p {
+  margin-bottom: 20px;
+}
+
+.modal-content-add button {
+  background: #2daa14;
+  color: white;
+  border: none;
+  padding: 15px 20px; /* Reduced padding for smaller button size */
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content-add button:hover {
+  background: #1A4D2E;
+}

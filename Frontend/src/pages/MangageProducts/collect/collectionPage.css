@@ -1,0 +1,155 @@
+.manage-collection-title {
+  text-align: left;
+  font-weight: 550;
+  margin-bottom: 30px;
+}
+
+.table-container thead,
+.table-container tbody {
+  display: table; /* Ensure proper table layout for both thead and tbody */
+  width: 100%; /* Ensure both thead and tbody take full width */
+}
+
+.table-container thead th {
+  position: sticky; /* Make the table header sticky */
+  top: 0; /* Stick the header to the top */
+  z-index: 1; /* Ensure the header appears above other content */
+  background-color: #1A4D2E; /* Optional: Customize the background color */
+  color: white; /* Optional: Customize the text color */
+  padding: 10px;
+  text-align: left;
+}
+
+.table-container tbody {
+  display: block; /* Enable vertical scrolling for tbody */
+  max-height: 420px; /* Optional: Set a maximum height for vertical scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-container tbody tr {
+  display: table; /* Ensure proper table row layout */
+  width: 100%; /* Ensure rows take full width */
+}
+
+.table-container tbody td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-container thead,
+.table-container tbody tr {
+  display: table;
+  table-layout: fixed; /* Ensure consistent cell widths */
+  width: 100%;
+}
+
+.table-container table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+} 
+
+.addnew-btn {
+  color: white;
+  background-color: #2daa14;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addnew-btn:hover {
+  background-color: #1A4D2E;
+  color: white;
+}
+.addnew-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.addnew-btn:focus {
+  outline: none; 
+  box-shadow: 0 0 0 3px rgba(45, 170, 20, 0.5); 
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background: #2daa14;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Reduced padding for smaller button size */
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #1A4D2E;
+}
+
+/* for add edit  */
+
+.modal-overlay-add {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content-add {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 600px;
+}
+
+.modal-content-add p {
+  margin-bottom: 20px;
+}
+
+.modal-content-add button {
+  background: #2daa14;
+  color: white;
+  border: none;
+  padding: 15px 20px; /* Reduced padding for smaller button size */
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content-add button:hover {
+  background: #1A4D2E;
+}

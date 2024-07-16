@@ -1,0 +1,238 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .income-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .table-container th {
+    background-color: #1A4D2E;
+    color: white;
+  }
+  
+
+  
+  thead th {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.1em;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+
+  
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+  }
+  
+  tfoot td {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    thead {
+      display: none;
+    }
+  
+    tbody tr {
+      display: block;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+    }
+  
+    tbody td {
+      display: block;
+      text-align: right;
+      font-size: 0.9em;
+      border-bottom: 0;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      padding-right: 10px;
+      text-align: left;
+      font-weight: bold;
+    }
+  
+    tbody td:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+  
+ 
+   */
+
+   .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .filter-container input {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .filter-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  
+  .filter-container .date-picker {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-container .date-picker label {
+    margin-right: 10px;
+  }
+  
+  .button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #45a049; 
+  }
+
+  .incomeexpenses-page {
+    position: relative; /* Ensure relative positioning for absolute positioning of app bar */
+  }
+  
+  .incomeexpenses-page {
+    position: relative; /* Ensure relative positioning for absolute positioning of app bar */
+  }
+  
+  .itable-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .itable-container table {
+    width: 100%;
+    min-width: 2400px; /* Adjust the min-width based on the total width of your columns */
+    border-collapse: collapse; /* Ensure borders are collapsed for better visual appearance */
+  }
+  
+  .itable-container thead,
+  .itable-container tbody {
+    display: table; /* Ensure proper table layout for both thead and tbody */
+    width: 100%; /* Ensure both thead and tbody take full width */
+  }
+  
+  .itable-container thead th {
+    position: sticky; /* Make the table header sticky */
+    top: 0; /* Stick the header to the top */
+    z-index: 1; /* Ensure the header appears above other content */
+    background-color: #1A4D2E; /* Optional: Customize the background color */
+    color: white; /* Optional: Customize the text color */
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .itable-container tbody {
+    display: block; /* Enable vertical scrolling for tbody */
+    max-height: 300px; /* Optional: Set a maximum height for vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling in tbody */
+  }
+  
+  .itable-container tbody tr {
+    display: table; /* Ensure proper table row layout */
+    width: 100%;
+  }
+  
+  .itable-container tbody td {
+    padding: 10px;
+    text-align: left;
+    min-width: 150px; /* Set a minimum width for table cells */
+  }
+  
+  .itable-container thead,
+  .itable-container tbody tr {
+    display: table;
+    table-layout: fixed; /* Ensure consistent cell widths */
+    width: 100%;
+  }
+  
+  .itable-container table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+
+  

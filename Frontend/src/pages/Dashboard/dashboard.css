@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ribbon-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .ribbon-counts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .ribbon-count {
+    width: calc(50% - 10px);
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .ribbon-count:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ribbon-count .color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .ribbon-count .color.blue { background-color: #007bff; }
+  .ribbon-count .color.red { background-color: #dc3545; }
+  .ribbon-count .color.yellow { background-color: #ffc107; }
+  .ribbon-count .color.white { background-color: #f8f9fa; border: 1px solid #ddd; }
+  .ribbon-count .color.purple { background-color: #6f42c1; }
+  .ribbon-count .color.orange { background-color: #fd7e14; }
+  .ribbon-count .color.black { background-color: #343a40; }
+  .ribbon-count .color.pink { background-color: #e83e8c; }
+  
+  .ribbon-icon {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .ribbon-count .count {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  
+
+  .bar-chart-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ribbon-container {
+    width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .bar-chart-container {
+    width: 50%;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .dashboard-page {
+    position: relative; /* Ensure relative positioning for absolute positioning of app bar */
+  }
+  
+  .pie-chart-container {
+    margin-top: 20px;
+  }
+  

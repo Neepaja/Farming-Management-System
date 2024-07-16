@@ -1,0 +1,252 @@
+/* .container {
+  background-color: #f8f9fa; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  width: 90%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: none;
+  width: 90%; 
+  max-width: 600px; 
+  max-height: 90vh; 
+  overflow-y: auto; 
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup .form-group {
+  margin-bottom: 20px;
+}
+
+.popup label {
+  font-weight: bold;
+}
+
+.popup input[type="text"],
+.popup input[type="number"],
+.popup select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+.popup button[type="button"] {
+  background-color: #dc3545;
+}
+
+.popup button[type="button"]:hover {
+  background-color: #bd2130;
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #1A4D2E;
+  color: white;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.edit-icon,
+.delete-icon,
+.view-icon {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
+.view-icon:hover {
+  color: #007bff;
+}
+
+
+.addnew-btn {
+  color: white;
+  background-color: #585858;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addnew-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+.search-bar {
+  flex: 1;
+  margin-right: 400px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+
+
+ */
+
+ .manage-items-title {
+  text-align: left;
+  font-weight: 550;
+  margin-bottom: 30px;
+}
+
+.table-container thead,
+.table-container tbody {
+  display: table; /* Ensure proper table layout for both thead and tbody */
+  width: 100%; /* Ensure both thead and tbody take full width */
+}
+
+.table-container thead th {
+  position: sticky; /* Make the table header sticky */
+  top: 0; /* Stick the header to the top */
+  z-index: 1; /* Ensure the header appears above other content */
+  background-color: #1A4D2E; /* Optional: Customize the background color */
+  color: white; /* Optional: Customize the text color */
+  padding: 10px;
+  text-align: left;
+}
+
+.table-container tbody {
+  display: block; /* Enable vertical scrolling for tbody */
+  max-height: 420px; /* Optional: Set a maximum height for vertical scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-container tbody tr {
+  display: table; /* Ensure proper table row layout */
+  width: 100%; /* Ensure rows take full width */
+}
+
+.table-container tbody td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-container thead,
+.table-container tbody tr {
+  display: table;
+  table-layout: fixed; /* Ensure consistent cell widths */
+  width: 100%;
+}
+
+.table-container table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+} 
+
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.date-filters {
+  display: flex;
+  gap: 10px; 
+}
+
+
+
+.date-filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #333;
+}
+
+.date-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.container {
+  background-color: #f8f9fa; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.container.minimized {
+  margin-left: 60px; /* Adjust based on the minimized sidebar width */
+  width: calc(100% - 60px); /* Adjust based on the minimized sidebar width */
+  max-width: calc(100% - 60px); /* Adjust based on the minimized sidebar width */
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 60px; /* Adjust for minimized sidebar on small screens */
+    width: calc(100% - 60px); /* Adjust for minimized sidebar on small screens */
+    max-width: calc(100% - 60px); /* Adjust for minimized sidebar on small screens */
+  }
+}
+.container.expanded {
+  margin-left: 200px; /* Sidebar expanded width */
+  width: calc(100% - 200px); /* Adjust based on the sidebar width */
+  max-width: calc(100% - 200px); /* Adjust based on the sidebar width */
+}
+
