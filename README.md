@@ -1,4 +1,4 @@
-# Web-Based Farm Management System
+# Web-Based Farming Management System
 
 A web-based management system developed using React, Express, Node.js, and MySQL. The system provides various features to manage farming operations efficiently.
 
